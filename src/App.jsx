@@ -2,12 +2,16 @@ import { useState } from "react";
 
 function App() {
 
-const [count , setCount] = useState(0)
+    const [count , setCount] = useState(0)
 
     const style = {backgroundColor: 'black' }
 
     const handleConsole = () => {
         console.log('evento')
+    }
+
+    const fnSaludo = () => {
+        console.log('Hola')
     }
 
     return (

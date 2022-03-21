@@ -1,4 +1,5 @@
-function App () {
+import './navBar.css'
+function NavBar() {
         return <>
                 <nav class="navbar navbar-expand-sm bg-warning navbar-warning">
                 
@@ -21,3 +22,4 @@ function App () {
                 </nav>
                 </>;
 }
+export default NavBar

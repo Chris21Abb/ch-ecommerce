@@ -1,4 +1,11 @@
 import { useState } from "react";
+import NavBar from './components/NavBar/NavBar';
+import titulo from './components/Titulo/Titulo'
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
+
 
 function App() {
 
@@ -15,11 +22,15 @@ function App() {
     }
 
     return (
-        <><div className="App" style={style} onClick={handleConsole}></div><navbar>
-            <img src="{logo}" className="AppLogo" alt="Logo" />
+        <div className="App" style={style} onClick={handleConsole}>
+        
+        <NavBar />
 
-            <imput />
+        <img src="./components/img/dc.png" className="App-Logo" alt="DC Logo" />
 
-        </navbar></>
+        <input />
+
+        </div>
+
     )
 }

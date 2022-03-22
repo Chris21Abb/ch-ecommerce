@@ -5,3 +5,6 @@ funciton Container () {
         <div> ComponenteContainer</div>
     )
 }
+
+export default containerClase
+

@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import NavBar from '../src/components/NavBar/NavBar'
+import titulo from './components/Titulo/Titulo'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [count , setCount] = useState(0)
+
+    const style = {backgroundColor: 'grey' }
+
+    const handleConsole = () => {
+        console.log('evento')
+    }
+
+    const fnSaludo = () => {
+        console.log('Hola')
+    }
+
+    return (
+        <div className="App" style={style} onClick={handleConsole}>
+        
+        <NavBar />
+
+        <input />
+
+        </div>
+
+    )
 }
 
 export default App;

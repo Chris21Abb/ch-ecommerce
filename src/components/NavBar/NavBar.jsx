@@ -1,25 +1,36 @@
-import './navBar.css'
+import './NavBar.css'
+import React from 'react';
+
+import { Container } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
+import { NavDropdown } from 'react-bootstrap';
+import { Collapse } from 'react-bootstrap';
+
 function NavBar() {
         return <>
-                <nav class="navbar navbar-expand-sm bg-warning navbar-warning">
-                
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Destro C</a>
-                </div>
-                <div class="container-fluid">
-                    <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tienda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Discografía</a>
-                    </li>
-                    </ul>
-                    </div>
-                </nav>
+            <Navbar bg="light" expand="lg">
+                <Container>
+                    <Navbar.Brand href="#home">Destro C</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="#home">Inicio</Nav.Link>
+                        <Nav.Link href="#link">Tienda</Nav.Link>
+                        <NavDropdown title="Más" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="#action/3.1">Accesorios</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2">Discos</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">Shows</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="#action/3.4">Acerca de</NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                    </Navbar.Collapse>
+                </Container>
+                </Navbar>
                 </>;
 }
+
 export default NavBar
+
+

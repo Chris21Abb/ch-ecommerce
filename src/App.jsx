@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NavBar from './components/NavBar/NavBar';
 import titulo from './components/Titulo/Titulo'
+import ItemListContainer from "./container/ItemListContainer/ItemListContainer";
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,8 +9,6 @@ import './App.css'
 
 
 function App() {
-
-    const [count , setCount] = useState(0)
 
     const style = {backgroundColor: 'black' }
 
@@ -22,6 +21,8 @@ function App() {
     }
 
     return (
+
+        <>
         <div className="App" style={style} onClick={handleConsole}>
         
         <NavBar />
@@ -31,6 +32,11 @@ function App() {
         <input />
 
         </div>
+        
+        <ItemListContainer>
+        titulo={titulo}
 
+        </ItemListContainer>
+        </>
     )
 }

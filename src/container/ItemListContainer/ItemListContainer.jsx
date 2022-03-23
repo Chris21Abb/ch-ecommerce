@@ -1,8 +1,23 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 function ItemListContainer({greeting, titulo}) {
-    const [count, setCount] = useState ( 0 ) 
+    const [ count, setCount ] = useState ( 0 ) 
+    const [ bool, setBool ] = useState ( true )
     
+    useEffect(()=>{
+        console.log('siempre 1')
+    
+    })
+
+    useEffect(()=>{
+        console.log('api 2')
+    
+    })
+
+    useEffect(()=>{
+        alert('si cambia bool 3')
+    
+    }, [bool])
     
     const manejarCount =()=> { 
         

@@ -6,6 +6,8 @@ import { useState } from "react";
 import NavBar from './components/styles/NavBar/NavBar';
 import Titulo from './components/styles/Titulo/Titulo';
 
+import ItemDetailContainer from './components/ItemDetailContainer';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -20,6 +22,10 @@ function App() {
             
 
             <ItemListContainer texto='OnLine Merch' />
+
+            <ItemDetailContainer />
+
+
         
 
         </div>

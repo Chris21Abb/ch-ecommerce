@@ -1,5 +1,6 @@
 import './ItemDetail.css';
 import React from "react";
+import ItemCount from '../ItemCount';
 
 
 export const ItemDetail = (data) => {
@@ -15,4 +16,21 @@ export const ItemDetail = (data) => {
     );
 }
 
+
+
+function ItemDetail ({ prod }) {
+
+    function onAdd(cant) {
+        console.log(cant)
+    }
+
+    return (
+        <>
+        <img src={prod.foto} className="w-25"/>
+        <div>{prod.name}</div>
+        <div>{prod.price}</div>
+        <ItemCount init-1/>
+        </>
+    )
+}
 export default ItemDetail;
